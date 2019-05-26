@@ -36,3 +36,16 @@ void tokenize<'+'>(std::string const& text, ParsingLog& parse, Scope& scope, Typ
     
     return P
 }
+template<>
+void tokenize<'-'>(std::string const& text, ParsingLog& parse, Scope& scope, TypeMap const& types) {
+    bool has_back = parse.size() > 0;
+    if(text.length() > 0) {
+        ParseData pd;
+        if(scope.has_var(text)) pd = InvokeVariable(scope.get_var(text));
+        else; //pd = Error (TODO:)
+        parse.push_back(pd);
+    }
+    
+    return P
+}
+
