@@ -9,14 +9,29 @@
 #ifndef Variable_hpp
 #define Variable_hpp
 
-#include <stdio.h>
-
 #include "Types.hpp"
+#include "Scope.hpp"
+
+#include <string>
 
 class Variable {
-    Type const* type;
 public:
-    Variable(Type const& type_);
+    Variable();
+    virtual std::string get_tibasic(Scope* scope);
+};
+
+class NumVariable : Variable {
+    int index;
+public:
+    NumVariable(int index_);
+    virtual std::string get_tibasic(Scope* scope);
+};
+
+class StrVariable : Variable {
+    NumVariable offset, length;
+public:
+    StrVariable(int offset_idx, int length_idx);
+    virtual std::string get_tibasic(Scope* scope);
 };
 
 #endif /* Variable_hpp */

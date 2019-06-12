@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9DAE444A229586750022F29A /* TokenState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE4448229586750022F29A /* TokenState.cpp */; };
+		9D6BDA90229DA08000C4A9C7 /* Keywords.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D6BDA8E229DA08000C4A9C7 /* Keywords.cpp */; };
 		9DAE444D2295932D0022F29A /* Scope.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE444B2295932D0022F29A /* Scope.cpp */; };
 		9DAE44502296CD0F0022F29A /* ParseData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE444E2296CD0F0022F29A /* ParseData.cpp */; };
 		9DAE44532296CEEA0022F29A /* Error.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE44512296CEEA0022F29A /* Error.cpp */; };
 		9DAE44562296D0A20022F29A /* Types.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE44542296D0A20022F29A /* Types.cpp */; };
 		9DAE44592296D4660022F29A /* Variable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE44572296D4660022F29A /* Variable.cpp */; };
-		9DAE445C2298288E0022F29A /* Operators.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DAE445A2298288E0022F29A /* Operators.cpp */; };
 		9DC782FD2293203F00BED9AF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DC782FC2293203F00BED9AF /* main.cpp */; };
 		9DC783052293209400BED9AF /* Compiler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DC783032293209400BED9AF /* Compiler.cpp */; };
 /* End PBXBuildFile section */
@@ -31,8 +30,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9DAE4448229586750022F29A /* TokenState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TokenState.cpp; sourceTree = "<group>"; };
-		9DAE4449229586750022F29A /* TokenState.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TokenState.hpp; sourceTree = "<group>"; };
+		9D6BDA8E229DA08000C4A9C7 /* Keywords.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Keywords.cpp; sourceTree = "<group>"; };
+		9D6BDA8F229DA08000C4A9C7 /* Keywords.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Keywords.hpp; sourceTree = "<group>"; };
 		9DAE444B2295932D0022F29A /* Scope.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Scope.cpp; sourceTree = "<group>"; };
 		9DAE444C2295932D0022F29A /* Scope.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Scope.hpp; sourceTree = "<group>"; };
 		9DAE444E2296CD0F0022F29A /* ParseData.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ParseData.cpp; sourceTree = "<group>"; };
@@ -43,8 +42,6 @@
 		9DAE44552296D0A20022F29A /* Types.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Types.hpp; sourceTree = "<group>"; };
 		9DAE44572296D4660022F29A /* Variable.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Variable.cpp; sourceTree = "<group>"; };
 		9DAE44582296D4660022F29A /* Variable.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Variable.hpp; sourceTree = "<group>"; };
-		9DAE445A2298288E0022F29A /* Operators.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Operators.cpp; sourceTree = "<group>"; };
-		9DAE445B2298288E0022F29A /* Operators.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Operators.hpp; sourceTree = "<group>"; };
 		9DC782F92293203F00BED9AF /* T-Script Compiler */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "T-Script Compiler"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DC782FC2293203F00BED9AF /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		9DC783032293209400BED9AF /* Compiler.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Compiler.cpp; sourceTree = "<group>"; };
@@ -82,22 +79,20 @@
 			isa = PBXGroup;
 			children = (
 				9DC782FC2293203F00BED9AF /* main.cpp */,
-				9DC783032293209400BED9AF /* Compiler.cpp */,
 				9DC783042293209400BED9AF /* Compiler.hpp */,
-				9DAE444B2295932D0022F29A /* Scope.cpp */,
-				9DAE444C2295932D0022F29A /* Scope.hpp */,
-				9DAE44572296D4660022F29A /* Variable.cpp */,
-				9DAE44582296D4660022F29A /* Variable.hpp */,
-				9DAE44542296D0A20022F29A /* Types.cpp */,
-				9DAE44552296D0A20022F29A /* Types.hpp */,
-				9DAE4448229586750022F29A /* TokenState.cpp */,
-				9DAE4449229586750022F29A /* TokenState.hpp */,
-				9DAE445A2298288E0022F29A /* Operators.cpp */,
-				9DAE445B2298288E0022F29A /* Operators.hpp */,
-				9DAE44512296CEEA0022F29A /* Error.cpp */,
-				9DAE44522296CEEA0022F29A /* Error.hpp */,
-				9DAE444E2296CD0F0022F29A /* ParseData.cpp */,
+				9DC783032293209400BED9AF /* Compiler.cpp */,
 				9DAE444F2296CD0F0022F29A /* ParseData.hpp */,
+				9DAE444E2296CD0F0022F29A /* ParseData.cpp */,
+				9DAE444C2295932D0022F29A /* Scope.hpp */,
+				9DAE444B2295932D0022F29A /* Scope.cpp */,
+				9DAE44582296D4660022F29A /* Variable.hpp */,
+				9DAE44572296D4660022F29A /* Variable.cpp */,
+				9DAE44552296D0A20022F29A /* Types.hpp */,
+				9DAE44542296D0A20022F29A /* Types.cpp */,
+				9D6BDA8F229DA08000C4A9C7 /* Keywords.hpp */,
+				9D6BDA8E229DA08000C4A9C7 /* Keywords.cpp */,
+				9DAE44522296CEEA0022F29A /* Error.hpp */,
+				9DAE44512296CEEA0022F29A /* Error.cpp */,
 			);
 			path = "T-Script Compiler";
 			sourceTree = "<group>";
@@ -159,11 +154,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DAE44532296CEEA0022F29A /* Error.cpp in Sources */,
+				9D6BDA90229DA08000C4A9C7 /* Keywords.cpp in Sources */,
 				9DAE444D2295932D0022F29A /* Scope.cpp in Sources */,
 				9DAE44502296CD0F0022F29A /* ParseData.cpp in Sources */,
-				9DAE445C2298288E0022F29A /* Operators.cpp in Sources */,
 				9DAE44592296D4660022F29A /* Variable.cpp in Sources */,
-				9DAE444A229586750022F29A /* TokenState.cpp in Sources */,
 				9DAE44562296D0A20022F29A /* Types.cpp in Sources */,
 				9DC783052293209400BED9AF /* Compiler.cpp in Sources */,
 				9DC782FD2293203F00BED9AF /* main.cpp in Sources */,

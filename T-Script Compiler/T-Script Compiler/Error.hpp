@@ -9,15 +9,25 @@
 #ifndef Error_hpp
 #define Error_hpp
 
-#include <stdio.h>
-#include <vector>
-#include <string>
+#include "ParseData.hpp"
 
-class Error {};
-using ErrorList = std::vector<Error>;
+#include <string>
+#include <list>
+
+class Error : public ParseData {
+public:
+    Error();
+    virtual std::string const& error_message();
+};
+
+using ErrorList = std::list<Error>;
 
 class FileError : public Error {};
-class SyntaxError : public Error {};
+
+class SyntaxError : public Error {
+public:
+    SyntaxError() : Error() {}
+};
 
 class InvalidInputError : public FileError {};
 class OutputError : public FileError {};
@@ -31,7 +41,13 @@ public:
 class NonexistantTypeError : public SyntaxError {
     std::string const* class_name;
 public:
-    NonexistantTypeError(std::string const&);
+    NonexistantTypeError(std::string const& class_name_);
+};
+
+class NoTokenError : public SyntaxError {
+    char token;
+public:
+    NoTokenError(char token_) : SyntaxError(), token(token_) {}
 };
 
 #endif /* Error_hpp */

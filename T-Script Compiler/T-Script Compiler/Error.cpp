@@ -10,3 +10,4 @@
 
 RedeclarationError::RedeclarationError(std::string const& var_name_) : var_name(&var_name_) {}
 NonexistantTypeError::NonexistantTypeError(std::string const& class_name_) : class_name(&class_name_) {}
+NoTokenError::NoTokenError(char tok) : SyntaxError(), token(tok) {}

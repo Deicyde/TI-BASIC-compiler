@@ -7,7 +7,13 @@
 //
 
 #include "Scope.hpp"
-#include <string>
+
+Scope::Scope() : larger(nullptr) {}
+Scope::Scope(Scope* last) : larger(last) {}
+
+Scope::~Scope() {
+    delete larger;
+}
 
 bool Scope::has_var(std::string const& var_name) const {
     for(Scope const* current = this; current != nullptr; current = current->larger) {
